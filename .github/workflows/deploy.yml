@@ -26,7 +26,7 @@ jobs:
           EXCLUDE: "/dist/, /node_modules/, /.github/"
           
       - name: directory
-        working-directory: /home/ubuntu/node-app
+        working-directory: "/home/ubuntu/node-app/"
         run: ls -l
 
       - name: restart PM2
