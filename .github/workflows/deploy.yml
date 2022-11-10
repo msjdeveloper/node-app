@@ -21,7 +21,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/dist/, /node_modules/, /.github/"
+          EXCLUDE: "/node_modules/, /.github/"
       
       - name: Install npm dependencies
         run: npm install
