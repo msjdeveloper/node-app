@@ -26,8 +26,9 @@ jobs:
           EXCLUDE: "/dist/, /node_modules/, /.github/"
           
       - name: directory
-        working-directory: "/home/ubuntu/node-app/"
         run: ls -l
+        shell: bash
+        working-directory: /home/ubuntu/node-app/
 
       - name: restart PM2
         run: sh deploy.sh
