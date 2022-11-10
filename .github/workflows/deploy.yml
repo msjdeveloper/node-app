@@ -33,7 +33,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            cd ~/home/ubuntu/node-app &&
+            cd node-app &&
             pm2 start index.js
 
 #       - name: restart PM2
