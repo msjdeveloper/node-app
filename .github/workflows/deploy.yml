@@ -27,7 +27,6 @@ jobs:
 
       - name: Restart PM2
         run: |
-          cd /home/${{ secrets.REMOTE_USER }}/node-app &&
           git fetch --all &&
           git pull origin master &&
           pm2 start index.js &&
