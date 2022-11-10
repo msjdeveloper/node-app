@@ -6,7 +6,7 @@ on:
 
 jobs:
   pipeline-cd:
-    name: Deploy to  !
+    name: Deploy to EC2-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
@@ -26,8 +26,4 @@ jobs:
         run: npm install
 
       - name: Restart PM2
-        run: |
-          git fetch --all &&
-          git pull origin master &&
-          pm2 start index.js &&
-          pm2 restart 0 --update-env
+        run: bash deploy.sh

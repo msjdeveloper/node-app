@@ -1,5 +1,7 @@
 #!/bin/bash
 
-cd /home/ec2-user/rpareembolso
-npm i
-pm2 reload app
+cd /home/ubuntu/node-app
+git fetch --all
+git pull origin master
+pm2 start index.js
+pm2 restart 0 --update-env
