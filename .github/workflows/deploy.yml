@@ -32,6 +32,4 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
-          script: |
-            cd node-app &&
-            pm2 start index.js
+          script: bash deploy.sh
