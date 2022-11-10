@@ -24,15 +24,6 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
           EXCLUDE: "/dist/, /node_modules/, /.github/"
-      
-      # - name: update
-      #   run: sudo apt update
 
-      # - name: Install npm dependencies
-      #   run: npm install
-
-      # - name: Install PM2
-      #   run: sudo npm install pm2@latest -g
-
-      - name: Restart PM2
-        run: bash deploy.sh
+      - name: restart PM2
+        run: sh deploy.sh
