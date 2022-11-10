@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v1
         run: |
           cd node-app
 
       - name: upload files ssh
-        uses: easingthemes/ssh-deploy@main
+      - uses: easingthemes/ssh-deploy@main
         run: |
           cd node-app
         env:
