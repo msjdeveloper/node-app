@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: Checkout files
         uses: actions/checkout@v1
-        working-directory: ./home/ubuntu/node-app
+        run: |
+          cd node-app
 
       - name: upload files ssh
         uses: easingthemes/ssh-deploy@main
-        working-directory: ./home/ubuntu/node-app
+        run: |
+          cd node-app
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --delete"

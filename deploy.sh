@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd node-app
 pwd
 # git fetch --all
 # git pull origin master
