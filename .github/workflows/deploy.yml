@@ -6,7 +6,7 @@ on:
 
 jobs:
   pipeline-cd:
-    name: Deploy to EC2-
+    name: Deploy to EC2
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
