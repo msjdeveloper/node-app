@@ -24,6 +24,9 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/home/ubuntu/node-app/"
           EXCLUDE: "/dist/, /node_modules/, /.github/"
+          
+      - name: directory
+        working-directory: /home/ubuntu/node-app
 
       - name: restart PM2
         run: sh deploy.sh
