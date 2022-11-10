@@ -7,7 +7,7 @@ on:
 jobs:
   pipeline-cd:
     name: Deploy to EC2-
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout files
         uses: actions/checkout@v1
@@ -22,14 +22,14 @@ jobs:
           TARGET: ${{ secrets.REMOTE_TARGET }}
           EXCLUDE: "/dist/, /node_modules/, /.github/"
       
-      - name: update
-        run: sudo apt update
+      # - name: update
+      #   run: sudo apt update
 
-      - name: Install npm dependencies
-        run: npm install
+      # - name: Install npm dependencies
+      #   run: npm install
 
-      - name: Install PM2
-        run: sudo npm install pm2@latest -g
+      # - name: Install PM2
+      #   run: sudo npm install pm2@latest -g
 
       - name: Restart PM2
         run: bash deploy.sh
