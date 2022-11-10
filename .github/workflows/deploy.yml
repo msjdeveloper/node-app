@@ -10,14 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
-      - uses: actions/checkout@v1
-        run: |
-          cd node-app
+        uses: actions/checkout@v1
 
       - name: upload files ssh
-      - uses: easingthemes/ssh-deploy@main
-        run: |
-          cd node-app
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --delete"
